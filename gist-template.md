@@ -1,10 +1,12 @@
 # Regex - Matching an Email
 
-Introductory paragraph (replace this with your text)
+Introductory paragraph:  The purpose of this tutorial is to describe a regular expression or regex.  These expressions contain a certain pattern of characters.  These patterns can be used to validate inputs.  For example, a regex can be used to validate a value or even an email address.  
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+For this tutorial, I will focus on one particular regex.  This expression will focus on matching an email.  The following expression will be broken down and explained.  The following expression can be used to validate that an email is following the correct format.  For example, if a user forgets the @ symbol, the expression will notice that it is not an email address.  
+
+Matching an Email – /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
 
 ## Table of Contents
 
