@@ -51,10 +51,26 @@ Character classes take a small sequence and match it up to a larger set.  For in
 In our email regex, /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/, we can look at the "\d".  This will take one character from lowercase letters.  After the @ symbol, it will make sure there is a lowercase letter.  
 
 ### Flags
+A flag is a parameter that is optional.  Flags change the default behavior of the search. Flags are a single i, g, s, m, y, or u.  
+
+Each letter is a different flag. The i flag ignores casing. The g flag is global so it will search all.  There are also dot all, multiline, sticky, and unicode flags.  
+
+Flags will come after the second /.  I included an example below.  
+/.+/g
 
 ### Grouping and Capturing
+Grouping and capturing is used to find a string of characters and group them.  Parts can be grouped together within parenthesis.  
+
+If we look at the email regex, /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/, you will notice that first group is inside a set of parenthesis.  This is the first group, ([a-z0-9_\.-]+). The next group is in the next set of parenthesis, ([\da-z\.-]+). The last group is ([a-z\.]{2,6}).
 
 ### Bracket Expressions
+Bracket expressions are used for character classes.  Brackets are used to enclose a set of characters.  A range of letters or numbers can be used within brackets.  In our email regex, /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/, we have three sets of brackets.  
+
+Our first set, [a-z0-9_\.-], uses a range of lowercase letters. Any letters between and z can be used.  Any digit between 0 and 9 can also be used.  
+
+Our second set, [\da-z\.-], uses and checks just the first character.  It is checking for any letter between a and z.  
+
+Our last set, [a-z\.], can use any letter between a and z, a \ and also a . in the set. 
 
 ### Greedy and Lazy Match
 
