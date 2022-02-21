@@ -25,12 +25,30 @@ Matching an Email – /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
 ## Regex Components
 
 ### Anchors
+To start, we will take a look at the anchors in the regex.  Anchors start and end an expression. Anchors are focused on positions rather than characters in the regex.  For example, the ^ symbol starts our expression and the $ symbol ends our expression.
+
+We can see in the following expression, that the ^ is starting our expression.  We can also see that the $ symbol is ending our expression.  
+/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
 
 ### Quantifiers
+Quantifiers are used to match a set of characters. For instance, quantifiers such as "a-z" will match any set of lowercase letters.  A quantifier of "0-9" will allow any set of numbers.
+
+In the first part of our email regex, /^([a-z0-9_\.-]+), it will allow a through z lowercase letters and numbers 0-9.  It will also accept the email if it has a _ symbol, a ., or a - symbol.  Our regex also contains a + that is outside of the brackets, which means it needs at least one item.
+
+The second part of our regex, ([\da-z\.-]+), is indicating that it needs a 
 
 ### OR Operator
+An Or operator takes one side of the or operator or the other side. The Or operatior is shown as a | .
+Our email regex, does not contain an Or operator so I will use a different example.   
+The following is from matching a hex value. 
+/^#?([a-f0-9]{6}|[a-f0-9]{3})$/
+
+The hex value will start at the #.  Then the regex will take the first side, ([a-f0-9]{6}, or the second side,[a-f0-9]{3}.  The first side, ([a-f0-9]{6}, will be a six character string with lowercase letters and numbers.  The second side, [a-f0-9]{3}, will be a three character string with lowercase letters and numbers.  
 
 ### Character Classes
+Character classes take a small sequence and match it up to a larger set.  For instance, the regex can match one character in the set.   
+
+In our email regex, /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/, we can look at the "\d".  This will take one character from lowercase letters.  After the @ symbol, it will make sure there is a lowercase letter.  
 
 ### Flags
 
@@ -48,4 +66,9 @@ Matching an Email – /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+I am Matt Foster.  I designed this tutorial as part of a full-stack web development bootcamp.  When I complete the bootcamp, I am looking to find a career in web development. 
+
+If you are interested in taking a look at my Github profile or getting in contact with me, you can find that information below.
+
+Github: https://github.com/fmatthew40
+email: fmatthew40@gmail.com
